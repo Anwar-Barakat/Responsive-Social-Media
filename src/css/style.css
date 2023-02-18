@@ -26,6 +26,8 @@
   --btn-padding: 0.6rem 2rem;
   --search-padding: 0.6rem 1rem;
   --card-padding: 1rem;
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
 }
 
 body {
@@ -38,6 +40,11 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+main {
+  position: relative;
+  top: 5.4rem;
 }
 
 .profile-picture {
@@ -67,7 +74,7 @@ img {
   opacity: 0.8;
 }
 
-.btn.btn-primiry {
+.btn.btn-primary {
   background: var(--color-primary);
   color: #fff;
 }
@@ -144,5 +151,172 @@ nav .container .create-post {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+}
+
+main .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 18vw auto 20vw;
+      grid-template-columns: 18vw auto 20vw;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  position: relative;
+}
+
+main .container .left {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--sticky-top-left);
+}
+
+main .container .left a.profile {
+  padding: var(--card-padding);
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  width: 100%;
+}
+
+main .container .left .sidebar {
+  margin-top: 1rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+
+main .container .left .sidebar .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .left .sidebar .nav-link:hover {
+  background-color: var(--color-light);
+}
+
+main .container .left .sidebar .nav-link:first-child.active {
+  overflow: hidden;
+  border-top-left-radius: var(--card-border-radius);
+}
+
+main .container .left .sidebar .nav-link:last-child.active {
+  overflow: hidden;
+  border-bottom-left-radius: var(--card-border-radius);
+}
+
+main .container .left .sidebar .nav-link i {
+  position: relative;
+  font-size: 1.3rem;
+  color: var(--color-gray);
+  margin-left: 2rem;
+}
+
+main .container .left .sidebar .nav-link i .notification-count {
+  background: var(--color-danger);
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 1px 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.4rem;
+}
+
+main .container .left .sidebar .nav-link h3 {
+  margin-left: 1.4rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+main .container .left .sidebar .nav-link.active {
+  background: var(--color-light);
+}
+
+main .container .left .sidebar .nav-link.active::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  background: var(--color-primary);
+  left: 0;
+}
+
+main .container .left .sidebar .nav-link.active i,
+main .container .left .sidebar .nav-link.active h3 {
+  color: var(--color-primary);
+}
+
+main .container .left .btn {
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+main .container .left .notifications-popup {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 30rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  -webkit-box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60% 25%);
+          box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60% 25%);
+  z-index: 8;
+  display: none;
+}
+
+main .container .left .notifications-popup::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  background: var(--color-white);
+  position: absolute;
+  left: -0.6rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+main .container .left .notifications-popup > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+main .container .left .notifications-popup > div small {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
