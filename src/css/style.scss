@@ -23,7 +23,7 @@
 
     --border-radius: 2rem;
     --card-border-radius: 1rem;
-    --btn-padding: 0.6rem 2rem;
+    --btn-padding: 0.3rem 2rem;
     --search-padding: 0.6rem 1rem;
     --card-padding: 1rem;
 
@@ -51,7 +51,9 @@ main {
     width: 2.7rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    overflow: hidden;
+    img {
+        border-radius: 50%;
+    }
 }
 
 img {
@@ -67,6 +69,7 @@ img {
     cursor: pointer;
     transition: all 1s ease-in-out;
     font-size: 0.9rem;
+    background: var(--color-light);
     &:hover {
         opacity: 0.8;
     }
