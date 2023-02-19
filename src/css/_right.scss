@@ -1,0 +1,72 @@
+.right {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+    .messages {
+        background: var(--color-white);
+        border-radius: var(--card-border-radius);
+        padding: var(--card-padding);
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            i {
+                font-size: 1.4rem;
+            }
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .category {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            h6 {
+                width: 100%;
+                text-align: center;
+                border-bottom: 3px solid var(--color-light);
+                font-size: 0.8rem;
+                &.active {
+                    border-color: var(--color-primary);
+                }
+            }
+            .message-requests {
+                color: var(--color-primary);
+            }
+        }
+        .message {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .profile-picture {
+                position: relative;
+                overflow: initial;
+                img {
+                    border-radius: 50%;
+                }
+                .active {
+                    border: 3px solid var(--color-white);
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    border-radius: 50%;
+                    background: var(--color-success);
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .friend-requests {
+    }
+}

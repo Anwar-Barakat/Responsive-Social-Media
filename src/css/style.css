@@ -92,6 +92,40 @@ img {
   color: var(--color-gray);
 }
 
+.text-bold {
+  font-weight: 500;
+}
+
+.search-bar {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--search-padding);
+}
+
+.search-bar input[type="search"] {
+  background: transparent;
+  width: 30vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+.search-bar input[type="search"]::-webkit-input-placeholder {
+  color: var(--color-gray);
+}
+
+.search-bar input[type="search"]:-ms-input-placeholder {
+  color: var(--color-gray);
+}
+
+.search-bar input[type="search"]::-ms-input-placeholder {
+  color: var(--color-gray);
+}
+
+.search-bar input[type="search"]::placeholder {
+  color: var(--color-gray);
+}
+
 nav {
   width: 100%;
   background-color: var(--color-white);
@@ -111,36 +145,6 @@ nav .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-nav .container .search-bar {
-  background-color: var(--color-light);
-  border-radius: var(--border-radius);
-  padding: var(--search-padding);
-}
-
-nav .container .search-bar input[type="search"] {
-  background: transparent;
-  width: 30vw;
-  margin-left: 1rem;
-  font-size: 0.9rem;
-  color: var(--color-dark);
-}
-
-nav .container .search-bar input[type="search"]::-webkit-input-placeholder {
-  color: var(--color-gray);
-}
-
-nav .container .search-bar input[type="search"]:-ms-input-placeholder {
-  color: var(--color-gray);
-}
-
-nav .container .search-bar input[type="search"]::-ms-input-placeholder {
-  color: var(--color-gray);
-}
-
-nav .container .search-bar input[type="search"]::placeholder {
-  color: var(--color-gray);
 }
 
 nav .container .create-post {
@@ -492,5 +496,109 @@ main .container .left .notifications-popup > div small {
 
 .middle .feed .liked-by p {
   margin-left: .5rem;
+}
+
+.right {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .messages .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages .heading i {
+  font-size: 1.4rem;
+}
+
+.right .messages .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid var(--color-light);
+  font-size: 0.8rem;
+}
+
+.right .messages .category h6.active {
+  border-color: var(--color-primary);
+}
+
+.right .messages .category .message-requests {
+  color: var(--color-primary);
+}
+
+.right .messages .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.right .messages .message:last-child {
+  margin-bottom: 0;
+}
+
+.right .messages .message .profile-picture {
+  position: relative;
+  overflow: initial;
+}
+
+.right .messages .message .profile-picture img {
+  border-radius: 50%;
+}
+
+.right .messages .message .profile-picture .active {
+  border: 3px solid var(--color-white);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-success);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.right .messages .message p {
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */

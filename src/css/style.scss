@@ -88,6 +88,26 @@ img {
     color: var(--color-gray);
 }
 
+.text-bold {
+    font-weight: 500;
+}
+
+.search-bar {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    input[type="search"] {
+        background: transparent;
+        width: 30vw;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        color: var(--color-dark);
+        &::placeholder {
+            color: var(--color-gray);
+        }
+    }
+}
+
 // ?__________________ Navigation ____________
 // ?__________________________________________
 @import "navigation";
@@ -99,3 +119,7 @@ img {
 // ?__________________ Middle Section ________
 // ?__________________________________________
 @import "middle";
+
+// ?__________________ Right Section _________
+// ?__________________________________________
+@import "right";
