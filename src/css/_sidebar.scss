@@ -28,6 +28,8 @@ main {
                     transition: all 0.3s ease-in-out;
                     position: relative;
                     align-items: center;
+                    color: var(--color-gray);
+
                     &:hover {
                         background-color: var(--color-light);
                     }
@@ -48,7 +50,6 @@ main {
                     i {
                         position: relative;
                         font-size: 1.3rem;
-                        color: var(--color-gray);
                         margin-left: 2rem;
                         .notification-count {
                             background: var(--color-danger);
@@ -90,7 +91,7 @@ main {
             }
             .btn {
                 text-align: center;
-                margin-top: 1rem;
+                margin-top: 1rem 0 2rem;
                 width: 100%;
             }
             .notifications-popup {

@@ -28,6 +28,11 @@
             }
         }
     }
+    .customize-theme {
+        .card {
+            width: 80vw;
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -73,6 +78,11 @@
             .right {
                 display: none;
             }
+        }
+    }
+    .customize-theme {
+        .card {
+            width: 90vw;
         }
     }
 }
